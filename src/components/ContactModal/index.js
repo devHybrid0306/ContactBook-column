@@ -40,8 +40,10 @@ const ContactModal = (props) => {
   const renderContact = ({ item }) => {
     const { recordID, thumbnailPath, displayName, phoneNumbers, hasThumbnail } = item;
     let phoneNum = '';
+    let phoneLabel = '';
     if (phoneNumbers.length !== 0) {
       phoneNum = phoneNumbers[0].number;
+      phoneLabel = phoneNumbers[0].label;
     }
 
     return (
@@ -50,6 +52,7 @@ const ContactModal = (props) => {
         avatar={thumbnailPath}
         name={displayName}
         phoneNum={phoneNum}
+        phoneLabel={phoneLabel}
         hasAvatar={hasThumbnail}
         handlePhoneNum={(num) => {
           handlePhoneNum(num);

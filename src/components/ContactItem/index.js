@@ -2,10 +2,11 @@ import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
 
 import { CustomText, Avatar } from 'components';
+import { colors } from 'theme';
 import styles from './styles';
 
 const ContactItem = (props) => {
-  const { avatar, name, phoneNum, hasAvatar, handlePhoneNum } = props;
+  const { avatar, name, phoneNum, phoneLabel, hasAvatar, handlePhoneNum } = props;
 
   return (
     <TouchableOpacity onPress={() => handlePhoneNum(phoneNum)}>
@@ -13,7 +14,9 @@ const ContactItem = (props) => {
         <Avatar name={name} avatar={avatar} hasAvatar={hasAvatar} />
         <View style={styles.info}>
           <CustomText text={name} />
-          <CustomText text={phoneNum} />
+          {phoneNum !== '' && (
+            <CustomText text={`[ ${phoneLabel} ] ${phoneNum}`} size={14} color={colors.textDark5} />
+          )}
         </View>
       </View>
     </TouchableOpacity>
