@@ -14,7 +14,7 @@ const Avatar = (props) => {
         <Image source={{ uri: avatar }} style={styles.image} />
       ) : (
         <View style={styles.avatar}>
-          <CustomText text={name.slice(0, 1)} color={colors.white} />
+          <CustomText text={name?.slice(0, 1)} color={colors.white} />
         </View>
       )}
     </>

@@ -24,6 +24,9 @@ DerivedData
 # Android/IntelliJ
 #
 build/
+app/build/
+__tests__/__snapshots__
+src/components/__tests__/__snapshots__
 .idea
 .gradle
 local.properties
