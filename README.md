@@ -13,8 +13,8 @@ This project is simple ContactBook built by React Native.
 
 ## Preview
 
-![](app/src/assets/images/1.png)
-![](app/src/assets/images/2.png)
+![](src/assets/images/1.png)
+![](src/assets/images/2.png)
 
 ## Main technologies used
 
